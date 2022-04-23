@@ -23,8 +23,15 @@
 <body>
 <div id="container"></div>
 <script type="text/babel">
+    class HelloWorld extends React.Component {
+        render() {
+            return <h3>Привет Виталий</h3>
+
+        }
+    }
     ReactDOM.render(
         <div>
+            <HelloWorld/>
             <h3>Иванов Виталий</h3>
             <h3>Петров Петр</h3>
             <h3>Сидоров Сидор</h3>
