@@ -25,21 +25,42 @@
 <script type="text/babel">
     class HelloWorld extends React.Component {
         render() {
-            return <h3>Привет Виталий</h3>
+            return <h3>Привет {this.props.greatName}</h3>
 
         }
     }
     ReactDOM.render(
         <div>
             <HelloWorld/>
-            <h3>Иванов Виталий</h3>
-            <h3>Петров Петр</h3>
+            <HelloWorld/>
+            <HelloWorld greatName= 'Иванов Виталий'/>
+            <HelloWorld greatName=" Петров Петр"/>
             <h3>Сидоров Сидор</h3>
         </div>,
 
 
     document.querySelector('#container')
     );
+
+    class Buttonify extends React.Component {
+        render() {
+            return(
+                <div>
+                    <button type={this.props.behavior}>{this.props.children}</button>
+                </div>
+            );
+        }
+    }
+
+    ReactDOM.render(
+        <div>
+            <HelloWorld/>
+            <Buttonify behavior="submit">Отправить данные</Buttonify>
+        </div>,
+        document.querySelector("#container")
+    );
+
+
 </script>
 </body>
 </html>
