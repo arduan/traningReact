@@ -1,5 +1,5 @@
 <! DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Еще компоненты</title>
@@ -18,15 +18,27 @@
 <script type="text/babel">
   class Square extends React.Component {
     render() {
+      var squareStyle = {
+        height: 150,
+        backgroundColor: "#FF6663"
+      };
       return(
-              <br/>
+              <div style={squareStyle}>
+
+              </div>
       );
     }
   }
   class Label extends React.Component {
     render() {
+      var labelStyle = {
+        fontFamily: "sans-serif",
+        fontWeight: "bold",
+        padding: 13,
+        margin: 0
+      };
       return (
-              <br/>
+              <p style={labelStyle}>#FF6663</p>
       );
     }
   }
@@ -40,6 +52,8 @@
               }
     return(
             <div style={cardStyle}>
+            <Square/>
+            <Label/>
 
             </div>
           );
